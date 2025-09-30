@@ -2,3 +2,15 @@ const KEY = "bf84c5dt8ba6f1571of07a1c8e407cf3";
 let context = "A four-line English poem with seven syllables per line";
 let prompt = "Generate ";
 const URL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${KEY}`;
+
+function generatePoem(event) {
+  event.preventDefault();
+  new Typewriter("#poem", {
+    strings: "Sunlight warms the soft grass"
+    autostart: true,
+    dealy: 1,
+    cursor: "",}
+      );}
+
+let poemFormElement = document.querySelector("#poem-generator-form");
+poemFormElement.addEventListener("submit", generatePoem);
