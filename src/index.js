@@ -13,7 +13,6 @@ function generatePoem(event) {
 
   let instructionsInput = document.querySelector("#user-instructions");
   let poemEl = document.querySelector("#poem");
-  poemEl.innerHTML = `<em>Your poem is generating...</em>`;
 
   /// ==================== API Info ===========================================
   const KEY = "bf84c5dt8ba6f1571of07a1c8e407cf3";
@@ -24,6 +23,29 @@ function generatePoem(event) {
     prompt
   )}&context=${encodeURIComponent(context)}&key=${encodeURIComponent(KEY)}`;
 
+  /// ===================== Show the poem block =================================
+  poemEl.classList.remove("hidden");
+  poemEl.innerHTML = `⏳ Generating an English poem about "${instructionsInput.value}. "<span id = "loading-text">...</span>`;
+
+  let loadingTW = new Typewriter("#loading-text", {
+    loop: true,
+    delay: 150,
+  });
+
+  loadingTW
+    .typeString(".")
+    .pauseFor(100)
+    .typeString(".")
+    .pauseFor(100)
+    .typeString(".")
+    .pauseFor(100)
+    .pauseFor(100)
+    .typeString(".")
+    .pauseFor(100)
+    .typeString(".")
+    .pauseFor(100)
+    .deleteAll()
+    .start();
   /// ===================== Fetch data ==========================================
   axios.get(URL).then(displayPoem);
 }
