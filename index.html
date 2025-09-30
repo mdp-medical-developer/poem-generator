@@ -4,53 +4,66 @@
     <meta charset="UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="src/styles.css" rel="stylesheet" type="text/css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI English Poem Generator</h1>
-    </header>
-  </body>
-  <main>
-    <form>
-      <input
-        type="text"
-        placeholder="Enter the topic of the poem"
-        autofocus
-        required
-        autocomplete="off"
-      />
-      <input type="submit" />
-    </form>
-    <div>
-      On days when I'm feeling low,
-      <br />
-      My friend's always there to show,
-      <br />
-      Seven words of kindness and care,
-      <br />
-      I know that they'll always be there.
-      <br />
-    </div>
-  </main>
+    <div class="container">
+      <header>
+        <h1>AI English Poem Generator</h1>
+      </header>
 
-  <footer>
-    This AI project was coded by
-    <a href="https://github.com/mdp-medical-developer" target="_blank"
-      >Catherine An</a
-    >
-    and is open-sourced on
-    <a
-      href="https://github.com/mdp-medical-developer/poem-generator"
-      target="_blank"
-      >Github</a
-    >
-    and is hosted on
-    <a href="https://training-my-ai-poem-generator.netlify.app/" target="_blank"
-      >Netlify</a
-    >
-  </footer>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter the topic of the poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="poem">
+          On days when I'm feeling low,
+          <br />
+          My friend's always there to show,
+          <br />
+          Seven words of kindness and care,
+          <br />
+          I know that they'll always be there.
+          <br />
+        </div>
+      </main>
+
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/mdp-medical-developer" target="_blank"
+          >Catherine An</a
+        >
+        and is open-sourced on
+        <a
+          href="https://github.com/mdp-medical-developer/poem-generator"
+          target="_blank"
+          >Github</a
+        >
+        and is hosted on
+        <a
+          href="https://training-my-ai-poem-generator.netlify.app/"
+          target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
+  </body>
 </html>
