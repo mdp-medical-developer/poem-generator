@@ -52,6 +52,7 @@ form {
   font-size: 16px;
   border-radius: 50px;
   padding: 14px 24px;
+  cursor: pointer;
 }
 
 .poem {

@@ -23,7 +23,7 @@
       </header>
 
       <main>
-        <form>
+        <form id="poem-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of the poem"
@@ -31,12 +31,11 @@
             required
             autocomplete="off"
             class="instructions"
+            id="user-instructions"
           />
           <input type="submit" class="submit-button" />
-        </form id="poem-generator-form">
-        <div class="poem" id="poem">
-
-        </div>
+        </form>
+        <div class="poem" id="poem"></div>
       </main>
 
       <footer>
@@ -58,5 +57,6 @@
         >
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
